@@ -2,417 +2,228 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beth Gerharts | Cloud GRC & Security Compliance</title>
-<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADGElEQVR4nL2Xu28cVRSHv9+9OxvvZo1NcMNDSYgQDUkkZKWjA4GUKJIp/E+AkBCKoSMSqVKkQogEUdIAHRKKgKwQKZBCBdlYFEgQQ03sAN717uycQzG7lrHZXc/4cYrRFDPzfXPOfZwrAFiM8Hl27MkzT1GNbzh+Ue7PABVA7C0cMNAK8BXef//ByvLPQ6aGNzMnTi/EED+QwhPuBu575G4LCUm4+UPH3l693/oIFqMAHnv67EUUvsAdd+uDInv/8+3h4IZCVIhYv//a6srdDzV3fP5xC+ldpDncsgH8IMMYlMUI54Kp95ZCPCw4QABHISYyu1xxtICbg/Y75WNC0S1zgr9SkTiFuyhR8zB4w8qNVwnVAxDKvB0EG6nT7vmmSInwUvAY4GHHOXeqyovPHWGt7cRSX0KVMvC/Os78yYSlCw3qiUgzaC53ma2LzIp9r5D3EP78iYR3X52mIminztL5Bi+VzMSuH/8PfGGaJEA6mNFp5lwqKbGrEuyAR+hlW2aBQUouAXCrQDkmCkyCQ76ClJUYm6wgWGtvqfn/wHdIbCnHg3WbOEVHZmA4z194tsrShQZRkI6Ab5foeS4xlcDX97rUEo1crMZmwBwaU6KW5Knc1XozkKhWYKYWJu7qIwXMoV4VN3/qcvXLfziSiBDGtwk+uEzXxPXmOp9836FWHf33MGEQmsOjR0VzuYuAS+cbpDhmO7euIbwxJW58u85nP2wwWx8PnygAkBnM1sWt5S6MkNgBv7PBTF3YfkzDSRKoPHzXAqMkeu6Yw3RJeCGBURLVClxv5jUvCi8ssFXim3tdphIxUxOf3tlg9mhxOICOnTxbqp8Jgk7quEOtqtJdfIV8EBfuacyhlmjzvmwEnD+QfCBSWGIvcHd6AbgpBZH364cVmUIAuB3SGK652TrSYUnk2XbH5VfC37/++IvL3lSIgw7ZswNkZ4CHmFTM7L21+63bgcXFuPpb6+Osn76O1FaIB3Y6UogRybN+78rqSuvy5uF0eEKeO35m3mJ8B7eXgUfYvwOqAx2k75TZtT9/bzXJd2L7Fy30meQt/FO9AAAAAElFTkSuQmCC">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Beth Gerharts | SOC 2 Readiness</title>
+<meta name="description" content="SOC 2 readiness support that gets clients audit-ready before fieldwork begins.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#12202E;
-    --slate:#1F3A5F;
-    --paper:#F6F4EF;
-    --paper-dim:#ECE8DE;
-    --line:#D8D2C3;
-    --signal:#B7893F;
-    --signal-dim:#E4D3B3;
-    --mono:'JetBrains Mono', monospace;
-    --serif:'Fraunces', serif;
-    --sans:'Inter', sans-serif;
+    --ink:#2A2622;
+    --slate:#6A5236;
+    --paper:#EFE6D6;
+    --paper-dim:#F3ECDF;
+    --line:rgba(168,126,58,.25);
+    --signal:#8C6A2F;
+    --signal-dim:#D8C197;
+    --body:#3F3831;
+    --muted:#7D7160;
+    --card:#FBF8F2;
+    --btn:#A87E3A;
+    --btn-text:#FFFDF8;
+    --edge:#A87E3A;
+    --grad-a:#F5F0E6;
+    --grad-b:#E9DFCC;
+    --page:#F7F3EC;
+    --ink:#2B2723;
+    --mono:'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color-scheme:light;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top, 0px);
+    padding-bottom:env(safe-area-inset-bottom, 0px);
   }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  *,*::before,*::after{box-sizing:inherit;}
+  html{scroll-padding-top:env(safe-area-inset-top, 0px);}
+  html{min-height:100%; background:#E0D4BD linear-gradient(135deg, #E4D9C4 0%, #DACDB3 100%) no-repeat; background-size:100% 100%;}
+  body{min-height:100%;}
   body{
     margin:0;
-    background:var(--paper);
+    background:transparent;
     color:var(--ink);
     font-family:var(--sans);
     line-height:1.55;
     -webkit-font-smoothing:antialiased;
   }
-  @media (prefers-reduced-motion: reduce){
-    *{animation:none !important; transition:none !important;}
+  @media (prefers-reduced-motion: reduce){ *{animation:none !important; transition:none !important;} }
+
+  .page{
+    max-width:680px;
+    margin:0 auto;
+    padding:56px 22px 48px;
   }
 
-  .wrap{max-width:860px; margin:0 auto; padding:0 28px;}
-
-  /* ---- header / hero ---- */
-  header.hero{
-    padding:76px 0 56px;
-    border-bottom:1px solid var(--line);
+  /* the card */
+  .card{
+    border-color:rgba(168,126,58,.28);
+    background:linear-gradient(135deg, var(--grad-a) 0%, var(--grad-b) 100%);
+    box-shadow:0 18px 40px -24px rgba(90,64,24,.45);
+    border:1px solid var(--line);
+    position:relative;
   }
-  .eyebrow{
-    font-family:var(--mono);
-    font-size:12.5px;
-    letter-spacing:.09em;
-    color:var(--signal);
-    text-transform:uppercase;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:22px;
-  }
-  .eyebrow::before{
+  .card::before{ /* gold edge, echoes the resume rule */
     content:"";
-    width:7px;height:7px;
-    background:var(--signal);
-    display:inline-block;
-    border-radius:1px;
-    transform:rotate(45deg);
+    position:absolute; left:0; top:0; bottom:0;
+    width:4px; background:var(--edge);
+  }
+  .card-head{ padding:40px 40px 30px 44px; border-bottom:1px solid var(--line); }
+  .ctrl-id{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.08em;
+    color:var(--signal);
+    display:flex; align-items:center; gap:10px;
+    margin:0 0 20px;
+  }
+  .ctrl-id::before{
+    content:""; width:7px; height:7px; background:var(--signal);
+    border-radius:1px; transform:rotate(45deg); flex:none;
   }
   h1{
     font-family:var(--serif);
     font-weight:500;
-    font-size:clamp(40px, 6vw, 62px);
-    line-height:1.03;
-    margin:0 0 14px;
+    font-size:clamp(36px, 7vw, 52px);
+    line-height:1.04;
     letter-spacing:-0.01em;
+    margin:0 0 10px;
   }
-  .role-line{
+  .role{
     font-family:var(--mono);
-    font-size:15px;
+    font-size:14.5px;
     color:var(--slate);
-    letter-spacing:.02em;
-    margin:0 0 30px;
+    margin:0 0 22px;
   }
-  .role-line span{color:var(--signal);}
   .lede{
-    font-size:18px;
-    max-width:620px;
-    color:#2B3A47;
+    font-size:17px;
+    color:var(--body);
     margin:0;
+    max-width:34em;
   }
-  .hero-links{
-    margin-top:34px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-  }
-  .btn{
-    font-family:var(--sans);
-    font-size:14px;
-    font-weight:600;
-    padding:11px 20px;
-    border-radius:2px;
-    text-decoration:none;
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    transition:transform .15s ease, box-shadow .15s ease;
-    border:1px solid transparent;
-  }
-  .btn:hover{transform:translateY(-1px);}
-  .btn-primary{background:var(--ink); color:var(--paper);}
-  .btn-primary:hover{box-shadow:0 6px 16px rgba(18,32,46,.25);}
-  .btn-ghost{background:transparent; color:var(--ink); border-color:var(--ink);}
-  .btn-ghost:hover{background:var(--ink); color:var(--paper);}
 
-  /* ---- control-id sections ---- */
-  section{padding:58px 0; border-bottom:1px solid var(--line);}
-  .ctrl-id{
-    font-family:var(--mono);
-    font-size:12.5px;
-    color:var(--signal);
-    letter-spacing:.08em;
-    margin-bottom:16px;
-    display:block;
-  }
+  .block{ padding:28px 40px 28px 44px; border-bottom:1px solid var(--line); }
+  .block:last-child{ border-bottom:0; }
   h2{
     font-family:var(--serif);
     font-weight:500;
-    font-size:28px;
-    margin:0 0 22px;
-    letter-spacing:-0.01em;
-  }
-  p.body-text{
-    font-size:16px;
-    color:#2B3A47;
-    max-width:640px;
+    font-size:21px;
     margin:0 0 16px;
   }
 
-  /* ---- focus grid ---- */
-  .focus-grid{
+  /* readiness path: a real sequence, so it is numbered */
+  ol.path{ list-style:none; margin:0; padding:0; counter-reset:step; }
+  ol.path li{
+    counter-increment:step;
     display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:2px;
-    background:var(--line);
-    border:1px solid var(--line);
-    margin-top:28px;
+    grid-template-columns:34px 1fr;
+    gap:4px 12px;
+    padding:11px 0;
+    border-top:1px dashed var(--line);
   }
-  .focus-cell{
-    background:var(--paper);
-    padding:22px 24px;
-  }
-  .focus-cell .fk{
+  ol.path li:first-child{ border-top:0; padding-top:0; }
+  ol.path li::before{
+    content:counter(step, decimal-leading-zero);
     font-family:var(--mono);
-    font-size:11.5px;
+    font-size:12.5px;
     color:var(--signal);
-    letter-spacing:.06em;
-    display:block;
-    margin-bottom:8px;
+    padding-top:3px;
+    grid-row:1 / span 2;
   }
-  .focus-cell .fv{
-    font-size:15px;
-    color:var(--ink);
-    font-weight:500;
-  }
-  @media (max-width:600px){ .focus-grid{grid-template-columns:1fr;} }
+  .step-name{ font-weight:600; font-size:15.5px; }
+  .step-desc{ font-size:14.5px; color:var(--body); }
 
-  /* ---- featured build ---- */
-  .build-card{
-    margin-top:26px;
-    border:1px solid var(--line);
-    background:var(--paper-dim);
-    padding:32px;
-  }
-  .build-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    flex-wrap:wrap;
-    gap:14px;
-    margin-bottom:14px;
-  }
-  .build-title{
-    font-family:var(--serif);
-    font-size:23px;
-    font-weight:500;
-    margin:0;
-  }
-  .status-tag{
-    font-family:var(--mono);
-    font-size:11px;
-    letter-spacing:.07em;
-    text-transform:uppercase;
-    color:var(--slate);
-    border:1px solid var(--slate);
-    padding:4px 9px;
-    white-space:nowrap;
-    height:fit-content;
-  }
-  .build-desc{font-size:15.5px; color:#2B3A47; max-width:600px; margin:0 0 14px;}
-  .build-stack{
-    font-family:var(--mono);
-    font-size:12px;
-    color:#8B8574;
-    letter-spacing:.02em;
-    margin:0 0 22px;
-  }
-  .build-links{display:flex; flex-wrap:wrap; gap:10px;}
-  .build-links a{
-    font-family:var(--mono);
-    font-size:15.5px;
-    font-weight:500;
-    color:var(--ink);
-    text-decoration:none;
-    border-bottom:1px solid var(--signal);
-    padding-bottom:2px;
-  }
-  .build-links a:hover{color:var(--signal);}
+  p.body-text{ font-size:15.5px; color:var(--body); margin:0 0 12px; max-width:36em; }
+  p.body-text:last-child{ margin-bottom:0; }
 
-  /* ---- credential strip ---- */
-  .cred-group{margin-top:26px;}
-  .cred-group + .cred-group{margin-top:20px;}
-  .cred-label{
-    font-family:var(--mono);
-    font-size:11px;
-    letter-spacing:.1em;
-    text-transform:uppercase;
-    font-weight:600;
-    margin-bottom:10px;
-    display:block;
+  .proof{ margin:0; padding:0; list-style:none; }
+  .proof li{
+    font-size:15px; color:var(--body);
+    padding:9px 0 9px 18px; position:relative;
   }
-  .cred-label.in-progress{color:var(--signal);}
-  .cred-label.held{color:var(--slate);}
-  .cred-strip{
-    display:flex;
-    flex-wrap:wrap;
-    gap:9px;
+  .proof li::before{
+    content:""; position:absolute; left:0; top:17px;
+    width:6px; height:6px; border:1px solid var(--signal); transform:rotate(45deg);
   }
-  .cred{
-    font-family:var(--mono);
-    font-size:12px;
-    letter-spacing:.03em;
-    padding:7px 12px;
+  .proof li.creds{ line-height:1.7; }
+  .proof a{ color:var(--ink); font-weight:500; text-decoration:none; border-bottom:1px solid var(--signal); }
+  .proof a:hover{ color:var(--signal); }
+
+  .contact{ background:rgba(255,253,248,.28); }
+  .actions{ display:flex; flex-wrap:wrap; gap:10px; margin-top:4px; }
+  .btn{
+    font-family:var(--sans); font-size:14px; font-weight:600;
+    padding:11px 18px; border-radius:2px; text-decoration:none;
+    display:inline-flex; align-items:center; border:1px solid transparent;
+    transition:transform .15s ease, background .15s ease, color .15s ease;
   }
-  .cred.cred-inprog{
-    color:var(--signal);
-    border:1px dashed var(--signal);
-    background:var(--signal-dim);
-  }
-  .cred.cred-held{
-    color:var(--slate);
-    border:1px solid var(--line);
-    background:var(--paper-dim);
+  .btn:hover{ transform:translateY(-1px); }
+  .btn-primary{ background:var(--ink); color:#FBF8F2; }
+  .btn-primary:hover{ background:var(--btn); }
+  .btn-ghost{ background:rgba(255,253,248,.35); color:var(--ink); border-color:var(--ink); }
+  .btn-ghost:hover{ background:var(--ink); color:var(--btn-text); }
+  a:focus-visible{ outline:2px solid var(--signal); outline-offset:3px; }
+  .email-line{ font-family:var(--mono); font-size:13px; color:var(--muted); margin:14px 0 0; }
+
+  .foot{
+    font-family:var(--mono); font-size:11.5px; color:var(--muted);
+    text-align:center; margin-top:22px;
   }
 
-  /* ---- footer ---- */
-  footer{padding:52px 0 70px; border-bottom:none;}
-  .footer-inner{
-    display:flex;
-    justify-content:space-between;
-   align-items:flex-end;
-    flex-wrap:wrap;
-    gap:24px;
-  }
-  .footer-name{font-family:var(--serif); font-size:20px;}
-  .footer-links{display:flex; flex-direction:column; gap:6px; align-items:flex-end;}
-  .footer-links a{
-    font-family:var(--mono);
-    font-size:13px;
-    color:var(--ink);
-    text-decoration:none;
-  }
-  .footer-links a:hover{color:var(--signal);}
-  .footer-note{
-    font-family:var(--mono);
-    font-size:11px;
-    color:#8B8574;
-    margin-top:2px;
+  @media (max-width:560px){
+    .page{ padding:28px 14px 36px; }
+    .card-head{ padding:30px 22px 24px 26px; }
+    .block{ padding:24px 22px 24px 26px; }
   }
 </style>
 </head>
 <body>
+<main class="page">
+  <article class="card">
+    <header class="card-head">
+      <p class="ctrl-id">CC4.1 / SOC 2 READINESS</p>
+      <h1>Beth Gerharts</h1>
+      <p class="role">SOC 2 Readiness Consultant, Miami, FL</p>
+      <p class="lede">I help growing companies get ready for their SOC 2 audit: scoped correctly, documented, and able to show evidence before fieldwork begins.</p>
+    </header>
 
-<div class="wrap">
-  <header class="hero">
-    <div class="eyebrow">Cloud GRC · Security Compliance</div>
-    <h1>Beth Gerharts</h1>
-    <div class="role-line">Governance, Risk &amp; Compliance <span>·</span> Turning Cloud Controls Into Proof</div>
-    <p class="lede">Focused on the space between security frameworks and the evidence that proves they're working: mapping controls, tracing incidents to root cause, and building tools that make compliance easier to show.</p>
-    <div class="hero-links">
-      <a class="btn btn-primary" href="https://drive.google.com/file/d/1vUWAYdh2YBfWdDwx-XDVqaiyTUnUnYKE/view?usp=sharing" target="_blank" rel="noopener">Resume ↓</a>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/in/beth-gerharts/" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn btn-ghost" href="mailto:bethgerharts@protonmail.com">Email</a>
-      <a class="btn btn-ghost" href="https://github.com/bettybangs/Risk-Whisperer" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </header>
+    <section class="block" aria-labelledby="path-h">
+      <h2 id="path-h">How I get a client audit-ready</h2>
+      <ol class="path">
+        <li><span class="step-name">Scope</span><span class="step-desc">Define system boundaries and select the Trust Services Criteria that fit the business.</span></li>
+        <li><span class="step-name">Assess</span><span class="step-desc">Run a gap assessment against those criteria and build a prioritized risk register.</span></li>
+        <li><span class="step-name">Document</span><span class="step-desc">Draft policies and control descriptions the team can actually operate.</span></li>
+        <li><span class="step-name">Collect evidence</span><span class="step-desc">Set up evidence collection, including automated checks that pull proof straight from source systems.</span></li>
+        <li><span class="step-name">Hand off</span><span class="step-desc">Deliver an organized, audit-ready package to the client and their audit firm.</span></li>
+      </ol>
+    </section>
 
-  <section id="about">
-    <span class="ctrl-id">AC-01 / BACKGROUND</span>
-    <h2>The Short Version</h2>
-    <p class="body-text">After two decades building and running my own swimwear brand: budgets, vendor contracts, regulatory licensing, the full operational load of a small business. I made a move into cybersecurity governance, risk, and compliance and now hold a B.S. in Cybersecurity and Information Assurance, a working stack of CompTIA and AWS certifications, and hands-on experience mapping NIST and ISO 27001 controls to live cloud environments. I'm also an ISC² candidate, working toward the CGRC and CCSP.</p>
-    <p class="body-text">What keeps me interested in GRC is that it's ultimately about evidence. A control either works or it doesn't. A risk is either understood or it isn't. Whether I'm mapping NIST controls, investigating an incident, or building compliance tooling, I'm drawn to the work of turning security requirements into something that can be demonstrated, tested, and trusted.</p>
-  </section>
+    <section class="block" aria-labelledby="firm-h">
+      <h2 id="firm-h">Working alongside audit firms</h2>
+      <p class="body-text">I do readiness, not attestation. Your firm keeps the audit and its independence; I prepare the client so they arrive organized, with fewer surprises and less back-and-forth during fieldwork.</p>
+    </section>
 
-  <section id="focus">
-    <span class="ctrl-id">RA-02 / FOCUS AREAS</span>
-    <h2>Focus Areas</h2>
-    <div class="focus-grid">
-      <div class="focus-cell">
-        <span class="fk">FRAMEWORKS</span>
-        <span class="fv">NIST 800-53 · ISO 27001 · SOC 2 · CSA CCM</span>
-      </div>
-      <div class="focus-cell">
-        <span class="fk">CLOUD</span>
-        <span class="fv">Azure (Defender, Sentinel, Entra ID) · AWS</span>
-      </div>
-      <div class="focus-cell">
-        <span class="fk">PRACTICE</span>
-        <span class="fv">Risk Assessment · Vulnerability Management · Policy</span>
-      </div>
-      <div class="focus-cell">
-        <span class="fk">CURRENT INTEREST</span>
-        <span class="fv">Where GRC automation meets applied AI</span>
-      </div>
-    </div>
-  </section>
+    <section class="block" aria-labelledby="proof-h">
+      <h2 id="proof-h">Recent work</h2>
+      <ul class="proof">
+        <li>SOC 2 Type 1 readiness engagement for a fintech custody platform, covering Trust Services Criteria scope, control boundaries, and wallet-segregation requirements.</li>
+        <li><a href="https://drive.google.com/file/d/1U9jpJAFV7xXl53sfkxUDB9ul8RAOWDHe/view?usp=drive_link" target="_blank" rel="noopener">Sample SOC 2 readiness report</a>, with a risk register, remediation roadmap, and three client-ready policies (fictional client).</li>
+        <li><a href="https://github.com/bettybangs/grc-evidence-collector" target="_blank" rel="noopener">GRC Evidence Collector</a>, a Python tool I built that pulls evidence directly from source systems on a schedule and maps it to SOC 2 CC8.1, NIST SP 800-53, and ISO 27001.</li>
+        <li class="creds">B.S., Cybersecurity and Information Assurance<br>CompTIA Security+, CySA+, PenTest+<br>AWS Certified Cloud Practitioner<br>CGRC in progress</li>
+      </ul>
+    </section>
 
-  <section id="build">
-    <span class="ctrl-id">CM-03 / FEATURED BUILD</span>
-    <h2>Risk Whisperer</h2>
-    <div class="build-card">
-      <div class="build-head">
-        <h3 class="build-title">AI-Powered GRC Control Assessor</h3>
-        <span class="status-tag">Live &amp; shipped</span>
+    <section class="block contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Refer a client or start a conversation</h2>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:bethgerharts@protonmail.com?subject=SOC%202%20readiness">Email</a>
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/beth-gerharts/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-primary" href="https://beth-gerharts-grc.vercel.app" target="_blank" rel="noopener">Full portfolio</a>
       </div>
-      <p class="build-desc">A tool I designed and built end to end: it takes a plain-language description of a system and generates security control assessments, risk scoring, and control-maturity ratings, with a POA&amp;M tracking module, prompt-injection-filtered input handling, and a serverless backend proxy that keeps the API key off the client entirely. Built because I wanted to understand GRC tooling from the inside, not just as an end user.</p>
-      <p class="build-stack">Built with React · Claude API · deployed on Vercel</p>
-      <div class="build-links">
-        <a href="https://riskwhisperer.vercel.app" target="_blank" rel="noopener">Live app ↗</a>
-        <a href="https://github.com/bettybangs/Risk-Whisperer" target="_blank" rel="noopener">GitHub ↗</a>
-        <a href="https://www.youtube.com/watch?v=QZWTN33ERdE" target="_blank" rel="noopener">5-min walkthrough ↗</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="report">
-    <span class="ctrl-id">CA-05 / READINESS REPORT</span>
-    <h2>SOC 2 Readiness Assessment</h2>
-    <div class="build-card">
-      <div class="build-head">
-        <h3 class="build-title">Northstar, Inc.: Mock Client Engagement</h3>
-        <span class="status-tag">Demonstration piece</span>
-      </div>
-      <p class="build-desc">Manual precursor to Risk Whisperer's automated assessments. The control-mapping judgment this report required is what the tool now does programmatically. Independently built a full SOC 2 Type I readiness deliverable for a fictional 12-person SaaS company facing an enterprise deal contingent on certification: control-by-control gap analysis against all nine SOC 2 Security criteria, a prioritized risk register, and a phased remediation roadmap with assigned control owners and evidence requirements. Drafted three full policies (Access Control, Incident Response, Vendor Management) ready for client adoption.</p>
-      <p class="build-stack">Fictional client, built as a portfolio demonstration</p>
-      <div class="build-links">
-        <a href="https://drive.google.com/file/d/1U9jpJAFV7xXl53sfkxUDB9ul8RAOWDHe/view?usp=drive_link" target="_blank" rel="noopener">View Report (PDF) ↗</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="nist-report">
-    <span class="ctrl-id">CA-06 / GAP ASSESSMENT</span>
-    <h2>NIST SP 800-53 Gap Assessment</h2>
-    <div class="build-card">
-      <div class="build-head">
-        <h3 class="build-title">Northstar, Inc.: Expanded Engagement</h3>
-        <span class="status-tag">Demonstration piece</span>
-      </div>
-      <p class="build-desc">Follow-on engagement expanding the Northstar SOC 2 work into a full NIST 800-53 Rev 5 Moderate baseline gap assessment, scoped to twelve control families relevant to a cloud-native SaaS company. Includes a scoping memo, family-by-family gap analysis, a risk register, a remediation roadmap, and sample SSP and POA&amp;M artifacts. Every finding was individually verified against the actual SP 800-53 control text, correcting several conflated controls along the way, so each gap reflects what the control actually requires rather than an assumed scope.</p>
-      <p class="build-stack">Fictional client (Northstar, Inc.), built as a portfolio demonstration</p>
-      <div class="build-links">
-        <a href="https://drive.google.com/file/d/1vXSrEWwy86QYF7RGQ4iDHWqtWKmd0tkg/view?usp=sharing" target="_blank" rel="noopener">View Report (PDF) ↗</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="credentials">
-    <span class="ctrl-id">PM-04 / CREDENTIALS</span>
-    <h2>Certifications</h2>
-
-    <div class="cred-group">
-      <span class="cred-label in-progress">In progress</span>
-      <div class="cred-strip">
-        <span class="cred cred-inprog">CGRC</span>
-        <span class="cred cred-inprog">CCSP</span>
-        <span class="cred cred-inprog">SSCP</span>
-      </div>
-    </div>
-
-    <div class="cred-group">
-      <span class="cred-label held">Held</span>
-      <div class="cred-strip">
-        <span class="cred cred-held">CompTIA PenTest+</span>
-        <span class="cred cred-held">CompTIA CySA+</span>
-        <span class="cred cred-held">CompTIA Security+</span>
-        <span class="cred cred-held">CompTIA Network+</span>
-        <span class="cred cred-held">CompTIA A+</span>
-        <span class="cred cred-held">CompTIA Project+</span>
-        <span class="cred cred-held">AWS Certified Cloud Practitioner</span>
-        <span class="cred cred-held">ITIL v4</span>
-        <span class="cred cred-held">LPI Linux Essentials</span>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-left">
-        <div class="footer-name">Let's talk.</div>
-        <div class="footer-note">Miami, FL. Open to remote and relocation.</div>
-      </div>
-      <div class="footer-links">
-        <a href="mailto:bethgerharts@protonmail.com">bethgerharts@protonmail.com</a>
-        <a href="https://www.linkedin.com/in/beth-gerharts/" target="_blank" rel="noopener">linkedin.com/in/beth-gerharts</a>
-        <a href="https://drive.google.com/file/d/1vUWAYdh2YBfWdDwx-XDVqaiyTUnUnYKE/view?usp=sharing" target="_blank" rel="noopener">Download resume (PDF)</a>
-      </div>
-    </div>
-  </footer>
-</div>
-
-<script defer src="/_vercel/insights/script.js"></script>
+      <p class="email-line">bethgerharts@protonmail.com &nbsp;|&nbsp; 305-300-8391</p>
+    </section>
+  </article>
+  <p class="foot">SOC 2 reports are issued only by licensed CPA firms. Readiness services support, and do not replace, the independent audit.</p>
+</main>
 </body>
 </html>
