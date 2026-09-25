@@ -271,6 +271,12 @@
     color:#8B8574;
     margin-top:2px;
   }
+  .evidence-pair{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin:18px 0 14px; }
+  .evidence-pair figure{ margin:0; }
+  .evidence-pair a{ display:block; border:0; }
+  .evidence-pair a:hover img{ border-color:var(--signal); }
+  .evidence-pair img{ display:block; width:100%; max-width:100%; height:auto; border:1px solid var(--line); background:#0d1117; }
+  .evidence-pair figcaption{ font-family:var(--mono); font-size:12px; color:var(--muted); margin-top:6px; }
 </style>
 </head>
 <body>
@@ -347,10 +353,20 @@
       </div>
       <p class="build-desc">Python scripts that pull compliance evidence straight from systems of record and save it as timestamped, control-mapped JSON. The first check verifies GitHub default-branch protection across both classic rules and rulesets, mapped to NIST SP 800-53 CM-3, SOC 2 CC8.1, and ISO 27001:2022 A.8.32, and runs every week in GitHub Actions using read-only, least-privilege tokens. A failed control fails the run and sends an alert.</p>
       <p class="build-desc">The first run caught my own repo with no branch protection. After I fixed it, the check still passed on the wrong rule, so I made the test stricter until it named exactly what was missing. The before and after evidence files are in the repo. Next up: an AWS IAM MFA check.</p>
+      <div class="evidence-pair">
+        <figure>
+          <a href="/evidence-before.png" target="_blank" rel="noopener"><img src="/evidence-before.png" alt="Evidence file from the first run showing status fail: default branch main is missing the required pull request rule" loading="lazy"></a>
+          <figcaption>Before: control failure detected</figcaption>
+        </figure>
+        <figure>
+          <a href="/evidence-after.png" target="_blank" rel="noopener"><img src="/evidence-after.png" alt="Evidence file after remediation showing status pass with all three required rules enforced" loading="lazy"></a>
+          <figcaption>After: control remediated and passing</figcaption>
+        </figure>
+      </div>
       <p class="build-stack">Built with Python · GitHub REST API · GitHub Actions · developed with Claude Code</p>
       <div class="build-links">
         <a href="https://github.com/bettybangs/grc-evidence-collector" target="_blank" rel="noopener">GitHub ↗</a>
-        <a href="https://github.com/bettybangs/grc-evidence-collector/tree/main/examples" target="_blank" rel="noopener">Before and after evidence ↗</a>
+        <a href="https://github.com/bettybangs/grc-evidence-collector/tree/main/examples" target="_blank" rel="noopener">Raw evidence files (JSON) ↗</a>
       </div>
     </div>
   </section>
@@ -403,33 +419,4 @@
       <div class="cred-strip">
         <span class="cred cred-held">CompTIA PenTest+</span>
         <span class="cred cred-held">CompTIA CySA+</span>
-        <span class="cred cred-held">CompTIA Security+</span>
-        <span class="cred cred-held">CompTIA Network+</span>
-        <span class="cred cred-held">CompTIA A+</span>
-        <span class="cred cred-held">CompTIA Project+</span>
-        <span class="cred cred-held">AWS Certified Cloud Practitioner</span>
-        <span class="cred cred-held">ITIL v4</span>
-        <span class="cred cred-held">LPI Linux Essentials</span>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-left">
-        <div class="footer-name">Let's talk.</div>
-        <div class="footer-note">Miami, FL. Open to remote and relocation.</div>
-      </div>
-      <div class="footer-links">
-        <a href="mailto:bethgerharts@protonmail.com">bethgerharts@protonmail.com</a>
-        <a href="https://www.linkedin.com/in/beth-gerharts/" target="_blank" rel="noopener">linkedin.com/in/beth-gerharts</a>
-        <a href="https://drive.google.com/file/d/1vUWAYdh2YBfWdDwx-XDVqaiyTUnUnYKE/view?usp=sharing" target="_blank" rel="noopener">Download resume (PDF)</a>
-        <a href="/soc2">SOC 2 readiness services</a>
-      </div>
-    </div>
-  </footer>
-</div>
-
-<script defer src="/_vercel/insights/script.js"></script>
-</body>
-</html>
+        <span class="cred cred-held"
