@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Beth Gerharts | Cloud GRC & Security Compliance</title>
+<meta name="description" content="Cloud GRC analyst building AI-powered compliance tools. SOC 2, NIST 800-53, ISO 27001. Live Risk Whisperer demo, resume, and background.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Beth Gerharts | Cloud GRC &amp; Security Compliance">
+<meta property="og:description" content="Cloud GRC analyst building AI-powered compliance tools. SOC 2, NIST 800-53, ISO 27001. Live Risk Whisperer demo, resume, and background.">
+<meta property="og:url" content="https://beth-gerharts-grc.vercel.app/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Beth Gerharts | Cloud GRC &amp; Security Compliance">
+<meta name="twitter:description" content="Cloud GRC analyst building AI-powered compliance tools. SOC 2, NIST 800-53, ISO 27001. Live Risk Whisperer demo, resume, and background.">
 <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADGElEQVR4nL2Xu28cVRSHv9+9OxvvZo1NcMNDSYgQDUkkZKWjA4GUKJIp/E+AkBCKoSMSqVKkQogEUdIAHRKKgKwQKZBCBdlYFEgQQ03sAN717uycQzG7lrHZXc/4cYrRFDPzfXPOfZwrAFiM8Hl27MkzT1GNbzh+Ue7PABVA7C0cMNAK8BXef//ByvLPQ6aGNzMnTi/EED+QwhPuBu575G4LCUm4+UPH3l693/oIFqMAHnv67EUUvsAdd+uDInv/8+3h4IZCVIhYv//a6srdDzV3fP5xC+ldpDncsgH8IMMYlMUI54Kp95ZCPCw4QABHISYyu1xxtICbg/Y75WNC0S1zgr9SkTiFuyhR8zB4w8qNVwnVAxDKvB0EG6nT7vmmSInwUvAY4GHHOXeqyovPHWGt7cRSX0KVMvC/Os78yYSlCw3qiUgzaC53ma2LzIp9r5D3EP78iYR3X52mIminztL5Bi+VzMSuH/8PfGGaJEA6mNFp5lwqKbGrEuyAR+hlW2aBQUouAXCrQDkmCkyCQ76ClJUYm6wgWGtvqfn/wHdIbCnHg3WbOEVHZmA4z194tsrShQZRkI6Ab5foeS4xlcDX97rUEo1crMZmwBwaU6KW5Knc1XozkKhWYKYWJu7qIwXMoV4VN3/qcvXLfziSiBDGtwk+uEzXxPXmOp9836FWHf33MGEQmsOjR0VzuYuAS+cbpDhmO7euIbwxJW58u85nP2wwWx8PnygAkBnM1sWt5S6MkNgBv7PBTF3YfkzDSRKoPHzXAqMkeu6Yw3RJeCGBURLVClxv5jUvCi8ssFXim3tdphIxUxOf3tlg9mhxOICOnTxbqp8Jgk7quEOtqtJdfIV8EBfuacyhlmjzvmwEnD+QfCBSWGIvcHd6AbgpBZH364cVmUIAuB3SGK652TrSYUnk2XbH5VfC37/++IvL3lSIgw7ZswNkZ4CHmFTM7L21+63bgcXFuPpb6+Osn76O1FaIB3Y6UogRybN+78rqSuvy5uF0eEKeO35m3mJ8B7eXgUfYvwOqAx2k75TZtT9/bzXJd2L7Fy30meQt/FO9AAAAAElFTkSuQmCC">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -160,6 +168,7 @@
   @media (max-width:600px){ .focus-grid{grid-template-columns:1fr;} }
 
   /* ---- featured build ---- */
+  .build-card + .build-card{margin-top:18px;}
   .build-card{
     margin-top:26px;
     border:1px solid var(--line);
@@ -225,6 +234,7 @@
   }
   .cred-label.in-progress{color:var(--signal);}
   .cred-label.held{color:var(--slate);}
+  .cred-label.prev{color:#5E6B78;}
   .cred-strip{
     display:flex;
     flex-wrap:wrap;
@@ -245,6 +255,12 @@
     color:var(--slate);
     border:1px solid var(--line);
     background:var(--paper-dim);
+  }
+
+  .cred.cred-prev{
+    color:#5E6B78;
+    border:1px dashed var(--line);
+    background:transparent;
   }
 
   /* ---- footer ---- */
@@ -280,7 +296,7 @@
     <div class="eyebrow">Cloud GRC · Security Compliance</div>
     <h1>Beth Gerharts</h1>
     <div class="role-line">Governance, Risk &amp; Compliance <span>·</span> Turning Cloud Controls Into Proof</div>
-    <p class="lede">Focused on the space between security frameworks and the evidence that proves they're working: mapping controls, tracing incidents to root cause, and building tools that make compliance easier to show.</p>
+    <p class="lede">I assess cloud security controls, document the evidence behind them, and build tools that turn gaps into remediation plans.</p>
     <div class="hero-links">
       <a class="btn btn-primary" href="https://drive.google.com/file/d/1vUWAYdh2YBfWdDwx-XDVqaiyTUnUnYKE/view?usp=sharing" target="_blank" rel="noopener">Resume ↓</a>
       <a class="btn btn-ghost" href="https://www.linkedin.com/in/beth-gerharts/" target="_blank" rel="noopener">LinkedIn</a>
@@ -292,8 +308,27 @@
   <section id="about">
     <span class="ctrl-id">AC-01 / BACKGROUND</span>
     <h2>The Short Version</h2>
-    <p class="body-text">After two decades building and running my own swimwear brand: budgets, vendor contracts, regulatory licensing, the full operational load of a small business. I made a move into cybersecurity governance, risk, and compliance and now hold a B.S. in Cybersecurity and Information Assurance, a working stack of CompTIA and AWS certifications, and hands-on experience mapping NIST and ISO 27001 controls to live cloud environments. I'm also an ISC² candidate, working toward the CGRC and CCSP.</p>
+    <p class="body-text">As founder and operator of my own business, I owned regulatory, licensing, and vendor-risk compliance, managed budgets and vendor contracts, and administered our business IT. That's where I learned the difference between reacting to risk and managing it, and it led me into cybersecurity governance, risk, and compliance. I now hold a B.S. in Cybersecurity and Information Assurance, a working stack of CompTIA and AWS certifications, and hands-on experience mapping NIST and ISO 27001 controls to live cloud environments. I'm also an ISC² candidate, working toward the CGRC, CCSP, and SSCP.</p>
     <p class="body-text">What keeps me interested in GRC is that it's ultimately about evidence. A control either works or it doesn't. A risk is either understood or it isn't. Whether I'm mapping NIST controls, investigating an incident, or building compliance tooling, I'm drawn to the work of turning security requirements into something that can be demonstrated, tested, and trusted.</p>
+  </section>
+
+  <section id="client-work">
+    <span class="ctrl-id">CA-02 / CLIENT WORK</span>
+    <h2>Client Work</h2>
+    <div class="build-card">
+      <div class="build-head">
+        <h3 class="build-title">SOC 2 Type 1 Compliance Advisor, Fintech Client</h3>
+        <span class="status-tag">Aug 2026 to present</span>
+      </div>
+      <p class="build-desc">Defining trust-services scope, control boundaries, and wallet-segregation requirements for a multi-asset custody platform, and working directly with leadership to align wallet architecture with SOC 2 documentation.</p>
+    </div>
+    <div class="build-card">
+      <div class="build-head">
+        <h3 class="build-title">Cybersecurity GRC Analyst, ROKS (via Riipen)</h3>
+        <span class="status-tag">Sept to Nov 2025</span>
+      </div>
+      <p class="build-desc">Delivered a compliance assessment mapped to NIST and ISO 27001, traced an active incident to an exposed private key in a code repository and assessed the downstream cloud exposure, and co-presented an executive walkthrough translating findings into business risk.</p>
+    </div>
   </section>
 
   <section id="focus">
@@ -327,7 +362,7 @@
         <h3 class="build-title">AI-Powered GRC Control Assessor</h3>
         <span class="status-tag">Live &amp; shipped</span>
       </div>
-      <p class="build-desc">A tool I designed and built end to end: it takes a plain-language description of a system and generates security control assessments, risk scoring, and control-maturity ratings, with a POA&amp;M tracking module, prompt-injection-filtered input handling, and a serverless backend proxy that keeps the API key off the client entirely. Built because I wanted to understand GRC tooling from the inside, not just as an end user.</p>
+      <p class="build-desc">Describe a system in plain language and Risk Whisperer returns control assessments, risk scores, maturity ratings, and a POA&amp;M to track remediation, mapped across 15 frameworks including NIST SP 800-53 and SOC 2. Under the hood, input is filtered for prompt injection and a serverless proxy keeps the API key off the client. Built because I wanted to understand GRC tooling from the inside, not just as an end user.</p>
       <p class="build-stack">Built with React · Claude API · deployed on Vercel</p>
       <div class="build-links">
         <a href="https://riskwhisperer.vercel.app" target="_blank" rel="noopener">Live app ↗</a>
@@ -409,8 +444,14 @@
         <span class="cred cred-held">CompTIA A+</span>
         <span class="cred cred-held">CompTIA Project+</span>
         <span class="cred cred-held">AWS Certified Cloud Practitioner</span>
-        <span class="cred cred-held">ITIL v4</span>
         <span class="cred cred-held">LPI Linux Essentials</span>
+      </div>
+    </div>
+
+    <div class="cred-group">
+      <span class="cred-label prev">Previously held (2023–2026)</span>
+      <div class="cred-strip">
+        <span class="cred cred-prev">ITIL v4 Foundation</span>
       </div>
     </div>
   </section>
