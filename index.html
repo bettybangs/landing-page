@@ -167,6 +167,32 @@
   }
   @media (max-width:600px){ .focus-grid{grid-template-columns:1fr;} }
 
+  /* ---- capability evidence ---- */
+  .ev-grid{
+    display:grid;
+    gap:2px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin-top:28px;
+  }
+  .ev-row{
+    background:var(--paper);
+    padding:20px 24px;
+    display:grid;
+    grid-template-columns:minmax(0, 1fr) minmax(0, 1.7fr);
+    gap:10px 28px;
+    align-items:baseline;
+  }
+  .ev-row .fv{
+    font-size:15px;
+    color:var(--ink);
+    font-weight:500;
+  }
+  .ev-row .build-links{row-gap:8px;}
+  .ev-row .build-links a{font-size:14px;}
+  .ev-more{margin-top:22px;}
+  @media (max-width:600px){ .ev-row{grid-template-columns:1fr; padding:18px 20px;} }
+
   /* ---- featured build ---- */
   .build-card + .build-card{margin-top:18px;}
   .build-card{
@@ -310,6 +336,52 @@
     <h2>The Short Version</h2>
     <p class="body-text">As founder and operator of my own business, I owned regulatory, licensing, and vendor-risk compliance, managed budgets and vendor contracts, and administered our business IT. That's where I learned the difference between reacting to risk and managing it, and it led me into cybersecurity governance, risk, and compliance. I now hold a B.S. in Cybersecurity and Information Assurance, a working stack of CompTIA and AWS certifications, and hands-on experience mapping NIST and ISO 27001 controls to live cloud environments. I'm also an ISC² candidate, working toward the CGRC, CCSP, and SSCP.</p>
     <p class="body-text">What keeps me interested in GRC is that it's ultimately about evidence. A control either works or it doesn't. A risk is either understood or it isn't. Whether I'm mapping NIST controls, investigating an incident, or building compliance tooling, I'm drawn to the work of turning security requirements into something that can be demonstrated, tested, and trusted.</p>
+  </section>
+
+  <section id="capability-evidence">
+    <span class="ctrl-id">EV-01 / CAPABILITY EVIDENCE</span>
+    <h2>Skills → Proof of Work</h2>
+    <p class="body-text">What I can do, where I've applied it, and the evidence behind it.</p>
+    <div class="ev-grid">
+      <div class="ev-row">
+        <span class="fv">AI governance and vendor risk</span>
+        <div class="build-links">
+          <a href="https://beth-gerharts-ai-registry.vercel.app/" target="_blank" rel="noopener noreferrer">AI Tool &amp; Vendor Registry ↗</a>
+          <a href="https://github.com/bettybangs/ai-registry/blob/main/api/tier.py" target="_blank" rel="noopener noreferrer">Tiering logic ↗</a>
+        </div>
+      </div>
+      <div class="ev-row">
+        <span class="fv">Risk assessment and scoring</span>
+        <div class="build-links">
+          <a href="https://riskwhisperer.vercel.app" target="_blank" rel="noopener noreferrer">Risk Whisperer ↗</a>
+          <a href="https://www.youtube.com/watch?v=QZWTN33ERdE" target="_blank" rel="noopener noreferrer">5-min walkthrough ↗</a>
+        </div>
+      </div>
+      <div class="ev-row">
+        <span class="fv">Automated control evidence</span>
+        <div class="build-links">
+          <a href="https://github.com/bettybangs/grc-evidence-collector" target="_blank" rel="noopener noreferrer">GRC Evidence Collector ↗</a>
+          <a href="/evidence-before.png" target="_blank" rel="noopener noreferrer">Before: fail ↗</a>
+          <a href="/evidence-after.png" target="_blank" rel="noopener noreferrer">After: pass ↗</a>
+        </div>
+      </div>
+      <div class="ev-row">
+        <span class="fv">SOC 2 readiness and control mapping</span>
+        <div class="build-links">
+          <a href="/soc2">SOC 2 readiness page</a>
+          <a href="https://drive.google.com/file/d/1U9jpJAFV7xXl53sfkxUDB9ul8RAOWDHe/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Northstar SOC 2 report ↗</a>
+        </div>
+      </div>
+      <div class="ev-row">
+        <span class="fv">NIST 800-53 gap analysis</span>
+        <div class="build-links">
+          <a href="https://drive.google.com/file/d/1vXSrEWwy86QYF7RGQ4iDHWqtWKmd0tkg/view?usp=sharing" target="_blank" rel="noopener noreferrer">Northstar NIST 800-53 report ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="build-links ev-more">
+      <a href="https://github.com/bettybangs/bettybangs/blob/main/CAREER_EVIDENCE_MAP.md" target="_blank" rel="noopener noreferrer">View the full evidence map →</a>
+    </div>
   </section>
 
   <section id="client-work">
